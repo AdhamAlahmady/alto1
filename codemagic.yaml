@@ -1,11 +1,12 @@
 workflows:
-  android-workflow:
-    name: Android Build
+  android-kotlin:
+    name: Android Kotlin Build
     max_build_duration: 60
     environment:
+      java: openjdk17
+      flutter: false
       vars:
         JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
-      flutter: false
     scripts:
       - name: Build APK
         script: ./gradlew assembleDebug
