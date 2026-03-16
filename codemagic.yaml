@@ -4,8 +4,6 @@ workflows:
     max_build_duration: 60
     environment:
       java: openjdk17
-      vars:
-        JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
     scripts:
       - name: Build APK
         script: ./gradlew assembleDebug
