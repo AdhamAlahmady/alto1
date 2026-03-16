@@ -3,7 +3,7 @@ workflows:
     name: Android Kotlin Build
     max_build_duration: 60
     environment:
-      java: openjdk17
+      java: default  # استخدم Java الافتراضية على Codemagic
     scripts:
       - name: Build APK
         script: ./gradlew assembleDebug
